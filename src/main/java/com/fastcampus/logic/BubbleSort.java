@@ -1,11 +1,15 @@
 package com.fastcampus.logic;
 
+import org.springframework.stereotype.Component;
+
 import java.util.ArrayList;
 import java.util.List;
 
 //버블정렬 알고리즘
-public class BubbleSort <T extends Comparable<T>> {
+@Component
+public class BubbleSort <T extends Comparable<T>> implements Sort<T>{
 
+    @Override
     public List<T> sort(List<T> input) {
         List<T> output = new ArrayList<T>(input);
 
