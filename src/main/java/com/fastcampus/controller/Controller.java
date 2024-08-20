@@ -9,24 +9,16 @@ import java.util.List;
 
 @RestController
 public class Controller {
-
     private final SortService sortService;
 
     public Controller(SortService sortService) {
         this.sortService = sortService;
     }
-/*
+
     @GetMapping("/")
-    public String hello(@RequestParam List<String> list) {
+    public String hello(@RequestParam(name = "list") List<String> list) {
 
         return sortService.doSort(list).toString();
-    }
-
- */
-
-    @GetMapping("/")
-    public String hello() {
-        return "Hello World";
     }
 
 }
