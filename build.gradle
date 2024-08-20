@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id 'war'
 }
 
 group = 'com.fastcampus'
@@ -10,7 +11,9 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.springframework:spring-context:5.3.19'
+    implementation 'org.springframework:spring-webmvc:6.1.12'
+    compileOnly group: 'jakarta.servlet', name: 'jakarta.servlet-api', version: '6.1.0'
+
     testImplementation 'org.springframework:spring-test:5.3.8'
     testImplementation platform('org.junit:junit-bom:5.10.0')
     testImplementation 'org.junit.jupiter:junit-jupiter'
